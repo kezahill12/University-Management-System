@@ -37,5 +37,6 @@ public class Main {
                 for(Student s : course1.getStudents()) {
                     System.out.println("- " + s.getName() + " (" + s.getStidentID() + ")");
                 }
+
     }
 }
