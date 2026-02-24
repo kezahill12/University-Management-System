@@ -18,8 +18,20 @@ public class Main {
 
                 Course course1 = new Course(1001, "Java Programming", 3, 2);
 
-                course1.addStudent(s1);
-                course1.addStudent(s2);
+                 manager.registerStudent(s1);
+                 manager.registerStudent(s2);
+
+        manager.createCourse(course1);
+
+
+        try {
+            manager.enrollStudentInCourse(s1, course1);
+            manager.enrollStudentInCourse(s2, course1);
+        } catch (CourseFullException e) {
+            System.out.println(e.getMessage());
+        } catch (StudentAlreadyEnrolledException e) {
+            System.out.println(e.getMessage());
+        }
 
                 System.out.println("Course: " + course1.getCourseName());
                 for(Student s : course1.getStudents()) {
