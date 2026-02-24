@@ -41,6 +41,7 @@ public class Student extends Person{
     }
 
     public void setdepartment(String department) {
+
         this.department = department;
     }
 
