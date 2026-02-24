@@ -59,7 +59,16 @@ public class Student extends Person{
         this.courses = courses;
     }
 
-//    public String getStudentID() {
-//        return null;
-//    }
+    public double calculateGPA() {
+        if (courses.isEmpty()) return 0;
+        double total = 0;
+        for (double grade : courses.values()) {
+            total += grade;
+        }
+        return total / courses.size();
+    }
+    public double calculateTuition() {
+        return 0; // base Student does not have a tuition fee itself
+    }
+
 }
