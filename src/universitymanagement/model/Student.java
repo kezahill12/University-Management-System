@@ -46,6 +46,7 @@ public class Student extends Person{
     }
 
     public Map<Course, Double> getCourses() {
+
         return courses;
     }
 
