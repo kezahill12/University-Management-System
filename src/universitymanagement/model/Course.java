@@ -61,6 +61,7 @@ public class Course {
     public boolean addStudent(Student student){
         if(students.size()<capacity){
             students.add(student);
+            return true;
         }
         else {
             System.out.println("course is full! ");
