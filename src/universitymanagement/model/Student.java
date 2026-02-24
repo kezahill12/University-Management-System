@@ -58,6 +58,10 @@ public class Student extends Person{
 
         this.courses = courses;
     }
+    public void addCourse(Course course, double grade) {
+        courses.put(course, grade);
+    }
+
 
     public double calculateGPA() {
         if (courses.isEmpty()) return 0;
