@@ -66,6 +66,7 @@ public class Course {
         else {
             System.out.println("course is full! ");
         }
+        return false;
     }
 }
 
