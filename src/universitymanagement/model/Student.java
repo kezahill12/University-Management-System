@@ -51,6 +51,7 @@ public class Student extends Person{
     }
 
     public void setCourses(Map<Course, Double> courses) {
+
         this.courses = courses;
     }
 
