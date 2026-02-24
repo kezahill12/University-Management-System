@@ -10,8 +10,8 @@ public class Main {
 
         UniversityManager manager = new UniversityManager();
 
-                Student s1 = new Student("Keza", 21, "001", 3.5, "Computer Science");
-                Student s2 = new Student("Hillary", 22, "002", 3.8, "Mathematics");
+                Student s1 = new Student("Kamanzi", 21, "001", 3.5, "Computer Science");
+                Student s2 = new Student("Umurisa", 22, "002", 3.8, "Mathematics");
 
 
                 Instructor inst = new Instructor("Dr. Alice", 40, 101, "Computer Science");
