@@ -36,6 +36,7 @@ public class Student extends Person{
     }
 
     public void setGPA(double GPA) {
+
         this.GPA = GPA;
     }
 
