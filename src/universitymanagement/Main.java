@@ -10,8 +10,8 @@ public class Main {
 
         UniversityManager manager = new UniversityManager();
 
-                Student s1 = new Student("Kamanzi", 21, "001", 3.5, "Computer Science");
-                Student s2 = new Student("Umurisa", 22, "002", 3.8, "Mathematics");
+                Student s1 = new  UndergraduateStudent("Kamanzi", 21, "001", 3.5, "Computer Science");
+                Student s2 = new  GraduateStudent("Umurisa", 22, "002", 3.8, "Mathematics");
 
 
                 Instructor inst = new Instructor("Dr. Alice", 40, 101, "Computer Science");
@@ -21,22 +21,42 @@ public class Main {
                  manager.registerStudent(s1);
                  manager.registerStudent(s2);
 
-        manager.createCourse(course1);
+        System.out.println();
+
+                 manager.createCourse(course1);
+
+        System.out.println();
 
 
         try {
             manager.enrollStudentInCourse(s1, course1);
             manager.enrollStudentInCourse(s2, course1);
-        } catch (CourseFullException e) {
-            System.out.println(e.getMessage());
-        } catch (StudentAlreadyEnrolledException e) {
+            System.out.println();
+
+        } catch (CourseFullException | StudentAlreadyEnrolledException e) {
             System.out.println(e.getMessage());
         }
 
-                System.out.println("Course: " + course1.getCourseName());
+        s1.addCourse(course1, 60);
+        s2.addCourse(course1, 90);
+
+        System.out.println("Course: " + course1.getCourseName());
+        System.out.println();
+
                 for(Student s : course1.getStudents()) {
-                    System.out.println("- " + s.getName() + " (" + s.getStidentID() + ")");
+                    System.out.println("- " + s.getName() + " (ID: " + s.getStudentID() + ")");
                 }
+
+        System.out.println();
+        s1.printCourses();
+        s2.printCourses();
+
+        System.out.println();
+        manager.printDeansList(70);
+
+
+
+        System.out.println();
 
     }
 }

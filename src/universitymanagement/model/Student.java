@@ -20,7 +20,7 @@ public class Student extends Person{
 
     }
 
-    public String getStidentID() {
+    public String getStudentID() {
 
         return studentID;
     }
@@ -72,8 +72,20 @@ public class Student extends Person{
         }
         return total / courses.size();
     }
+
+    public void printCourses() {
+        if (courses.isEmpty()) {
+            System.out.println(getName() + " is not enrolled in any course.");
+            return;
+        }
+        System.out.println(getName() + "'s courses:");
+        for (Course c : courses.keySet()) {
+            System.out.println(" - " + c.getCourseName() + ": Grade " + courses.get(c));
+        }
+    }
     public double calculateTuition() {
         return 0; // base Student does not have a tuition fee itself
     }
+
 
 }

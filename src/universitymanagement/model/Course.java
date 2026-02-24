@@ -58,6 +58,7 @@ public class Course {
     public void setStudents(List<Student> students) {
         this.students = students;
     }
+
     public boolean addStudent(Student student){
         if(students.size()<capacity){
             students.add(student);
