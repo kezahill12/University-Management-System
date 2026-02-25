@@ -12,7 +12,7 @@ public class Main {
         UniversityManager manager = new UniversityManager();
 
                 Student s1 = new  UndergraduateStudent("Kamanzi", 21, "001", 3.5, "Computer Science");
-                Student s2 = new  GraduateStudent("Umurisa", 22, "002", 3.8, "Mathematics");
+                Student s2 = new  GraduateStudent("Umurisa", 22, "002", 3.8, "Mathematics",5000);
 
 
                 Instructor inst = new Instructor("Dr. Alice", 40, 101, "Computer Science");
