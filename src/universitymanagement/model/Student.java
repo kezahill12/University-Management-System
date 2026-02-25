@@ -14,7 +14,7 @@ public class Student extends Person{
         super(name, age);
         this.studentID = studentID;
         this.GPA=GPA;
-        this.department=department;
+        this.department=departement;
         this.courses = new HashMap<>();
 
 
