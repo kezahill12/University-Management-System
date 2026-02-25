@@ -11,6 +11,7 @@ public class Main {
 
         UniversityManager manager = new UniversityManager();
 
+        System.out.println("=== Register Students ===");
                 Student s1 = new  UndergraduateStudent("Kamanzi", 21, "001", 3.5, "Computer Science");
                 Student s2 = new  GraduateStudent("Umurisa", 22, "002", 3.8, "Mathematics",5000);
 
@@ -22,12 +23,12 @@ public class Main {
                  manager.registerStudent(s1);
                  manager.registerStudent(s2);
 
-        System.out.println();
+                   System.out.println();
 
         System.out.println("=== Create Course ===");
                  manager.createCourse(course1);
 
-        System.out.println();
+                   System.out.println();
 
         System.out.println("=== Enroll Students ===");
 

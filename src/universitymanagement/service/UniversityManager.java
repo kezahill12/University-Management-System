@@ -1,7 +1,5 @@
 
 package universitymanagement.service;
-
-import org.jetbrains.annotations.NotNull;
 import universitymanagement.exception.CourseFullException;
 import universitymanagement.exception.StudentAlreadyEnrolledException;
 import universitymanagement.model.Student;

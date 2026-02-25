@@ -4,10 +4,18 @@ public class GraduateStudent extends Student{
 
     private double researchFee;
 
-    public GraduateStudent(String name, int age, String studentID, double GPA, String departement) {
+    public GraduateStudent(String name, int age, String studentID, double GPA, String departement ,double researchFee) {
         super(name, age, studentID, GPA, departement);
 
-        this.researchFee=5000;
+        this.researchFee=researchFee;
+    }
+
+    public double getResearchFee() {
+        return researchFee;
+    }
+
+    public void setResearchFee(double researchFee) {
+        this.researchFee = researchFee;
     }
 
     @Override

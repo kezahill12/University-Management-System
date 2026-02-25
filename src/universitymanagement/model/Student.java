@@ -84,7 +84,7 @@ public class Student extends Person{
         }
     }
     public double calculateTuition() {
-        return 0; // base Student does not have a tuition fee itself
+        return 0;
     }
 
 
