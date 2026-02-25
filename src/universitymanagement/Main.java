@@ -46,6 +46,7 @@ public class Main {
         System.out.println("Course: " + course1.getCourseName());
         System.out.println();
 
+        System.out.println("=== Student  ===");
                 for(Student s : course1.getStudents()) {
                     System.out.println("- " + s.getName() + " (ID: " + s.getStudentID() + ")");
                 }
