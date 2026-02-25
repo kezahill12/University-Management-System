@@ -55,7 +55,7 @@ public class Main {
         s1.printCourses();
         s2.printCourses();
 
-        System.out.println();
+        System.out.println("=== Dean's List ===");
         manager.printDeansList(70);
 
         System.out.println();
