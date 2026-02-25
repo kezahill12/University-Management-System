@@ -58,6 +58,10 @@ public class Main {
         System.out.println();
         manager.printDeansList(70);
 
+        System.out.println();
+        FileManager.saveStudents(manager.getStudents());
+        FileManager.saveCourses(manager.getCourses());
+
 
 
         System.out.println();
