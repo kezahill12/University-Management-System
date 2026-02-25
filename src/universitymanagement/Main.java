@@ -29,6 +29,7 @@ public class Main {
 
         System.out.println();
 
+        System.out.println("=== Enroll Students ===");
 
         try {
             manager.enrollStudentInCourse(s1, course1);
