@@ -55,4 +55,32 @@ public class UniversityManager {
 
     }
 
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+
+
+    public Student getTopStudent() {
+        Student top = null;
+
+        for (Student s : students) {
+            if (top == null || s.getGPA() > top.getGPA()) {
+                top = s;
+            }
+        }
+
+        return top;
+    }
 }
