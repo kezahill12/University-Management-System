@@ -14,45 +14,78 @@ public class Student extends Person{
         super(name, age);
         this.studentID = studentID;
         this.GPA=GPA;
-        this.department=department;
+        this.department=departement;
         this.courses = new HashMap<>();
 
 
     }
 
-    public String getStidentID() {
+    public String getStudentID() {
+
         return studentID;
     }
 
     public void setStudentID(String studentID) {
+
         this.studentID = studentID;
     }
 
     public double getGPA() {
+
         return GPA;
     }
 
     public void setGPA(double GPA) {
+
         this.GPA = GPA;
     }
 
     public String getdepartment() {
+
         return department;
     }
 
     public void setdepartment(String department) {
+
         this.department = department;
     }
 
     public Map<Course, Double> getCourses() {
+
         return courses;
     }
 
     public void setCourses(Map<Course, Double> courses) {
+
         this.courses = courses;
     }
+    public void addCourse(Course course, double grade) {
+        courses.put(course, grade);
+    }
 
-//    public String getStudentID() {
-//        return null;
-//    }
+
+    public double calculateGPA() {
+        if (courses.isEmpty()) return 0;
+        double total = 0;
+        for (double grade : courses.values()) {
+            total += grade;
+        }
+        return total / courses.size();
+    }
+
+    public void printCourses() {
+        if (courses.isEmpty()) {
+            System.out.println(getName() + " is not enrolled in any course.");
+            return;
+        }
+        System.out.println(getName() + "'s courses:");
+        for (Course c : courses.keySet()) {
+            System.out.println(" - " + c.getCourseName() + ": Grade " + courses.get(c));
+        }
+    }
+    public double calculateTuition() {
+        return 0;
+    }
+
+
 }
